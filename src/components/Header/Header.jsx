@@ -1,13 +1,13 @@
 import React from "react";
-import header from './header.css'
+import classes from './Header.module.css'
 
 export const Header = () => {
     return (
-        <header className='header'>
-            <div className="social-name">
+        <header className={classes.header}>
+            <div className={classes.socialName}>
                 Tricky Mike's
             </div>
-            <div className="social-social">
+            <div className={classes.socialSocial}>
                 social network
             </div>
         </header>

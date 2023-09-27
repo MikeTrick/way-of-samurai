@@ -1,8 +1,8 @@
-.nav {
+/*.nav {*/
 
-}
+/*}*/
 
-.navbar-elements {
+.navbarElements {
     background-color: rgba(1, 1, 52, 0.42);
     display: flex;
     flex-direction: column;
@@ -11,6 +11,10 @@
     justify-content: space-around;
 }
 
-.navbar-elements button {
+.navbarElements button {
     background-color: #313d48;
+}
+
+.navbarElement {
+    width: 250px;
 }

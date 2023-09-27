@@ -1,11 +1,11 @@
 import React from "react";
-import navbar from './navbar.css';
+import classes from './Navbar.module.css';
 
 export const Navbar = () => {
     return (
-        <nav className='nav'>
-            <div className="navbar-elements">
-                <div>
+        <nav >
+            <div className={classes.navbarElements}>
+                <div >
                     <button>
                         <a href="">Profile</a>
                     </button>

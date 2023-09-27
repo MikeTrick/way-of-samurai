@@ -1,4 +1,4 @@
-.app-wrapper {
+.appWrapper {
     background: radial-gradient(rgb(255, 255, 255), #021f3b );
     display: grid;
     grid-template-rows: 60px 1fr;
