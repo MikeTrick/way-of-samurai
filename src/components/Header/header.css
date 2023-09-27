@@ -1,0 +1,29 @@
+/*//'header'>*/
+/*<img src="#1" alt="Picture"/>*/
+/*                            <div className="social-name">*/
+/*                                                        Tricky Mike's*/
+/*</div>*/
+/*  <div className="social-social"*/
+
+.header {
+    background-color: rgba(2, 2, 61, 0.42);
+    display: flex;
+    align-items: center;
+}
+
+.social-name {
+    margin-left: 15px;
+    font-family: "Mr Dafoe", sans-serif;
+    font-size: 45px;
+    background-color: #2AA5A0;
+    background-image: linear-gradient(90deg, #c4284c, #2AA5A0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*background-image: linear-gradient(90deg, rgba(247, 255, 0, 0.84), #ffffff);*/
+}
+
+.social-social {
+    margin-left: 10px;
+    font-size: 30px;
+}
+

@@ -1,0 +1,16 @@
+.nav {
+
+}
+
+.navbar-elements {
+    background-color: rgba(1, 1, 52, 0.42);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar-elements button {
+    background-color: #313d48;
+}

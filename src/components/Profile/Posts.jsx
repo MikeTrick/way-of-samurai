@@ -1,16 +1,21 @@
 import React from "react";
+import {Post} from "./Post";
 
-export const ProfileInfo = () => {
+export const Posts = () => {
     return (
-        <div className="profile">
-            <img src="" alt="Avatar"/>
-            <div className="profile-info">
-                Date of birth
-                City
-                Interests
-                Education
-                Website
+        <div className="my-posts">
+            <div>
+                <input type="text" />
             </div>
+            <div>
+                <button>Отправить</button>
+            </div>
+            <div>
+                New Post
+            </div>
+            <Post textMessage='Misha'/>
+            <Post textMessage='Tanya'/>
+
         </div>
     )
 }
