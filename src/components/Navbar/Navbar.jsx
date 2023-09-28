@@ -2,6 +2,7 @@ import React from "react";
 import classes from './Navbar.module.css';
 
 export const Navbar = () => {
+
     return (
         <nav>
             <div className={classes.navbarElements}>
@@ -9,7 +10,7 @@ export const Navbar = () => {
                     <a>Profile</a>
                 </button>
 
-                <button className={classes.navbarElement}>
+                <button className={`${classes.navbarElement} ${classes.active}` }>
                     <a>Messages</a>
                 </button>
 
