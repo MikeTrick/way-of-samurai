@@ -1,0 +1,9 @@
+.profile {
+    background: transparent;
+}
+
+.profile img {
+    width: 1600px;
+    height: 400px;
+    opacity: 95%;
+}

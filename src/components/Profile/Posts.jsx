@@ -1,20 +1,24 @@
 import React from "react";
+
 import {Post} from "./Post";
+import classes from './Posts.module.css'
 
 export const Posts = () => {
     return (
-        <div className="my-posts">
-            <div>
-                <input type="text" />
+        <div className={classes.myPosts_wrapper}>
+            <div className={classes.input_container}>
+                <div className={classes.input_container__element}>
+                    <input type="text"/>
+                </div>
+                <div className={classes.input_container__element}>
+                    <button>Отправить</button>
+                </div>
             </div>
-            <div>
-                <button>Отправить</button>
+            <div className={classes.new_posts}>
+                <Post textMessage='Misha'/>
+                <Post textMessage='Tanya'/>
             </div>
-            <div>
-                New Post
-            </div>
-            <Post textMessage='Misha'/>
-            <Post textMessage='Tanya'/>
+
 
         </div>
     )

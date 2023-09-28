@@ -3,44 +3,32 @@ import classes from './Navbar.module.css';
 
 export const Navbar = () => {
     return (
-        <nav >
+        <nav>
             <div className={classes.navbarElements}>
-                <div >
-                    <button>
-                        <a href="">Profile</a>
-                    </button>
+                <button className={classes.navbarElement}>
+                    <a>Profile</a>
+                </button>
 
-                </div>
-                <div>
-                    <button>
-                        <a href="">Messages</a>
-                    </button>
+                <button className={classes.navbarElement}>
+                    <a>Messages</a>
+                </button>
 
-                </div>
-                <div>
-                    <button>
-                        <a href="">Settings</a>
-                    </button>
+                <button className={classes.navbarElement}>
+                    <a>Settings</a>
+                </button>
 
-                </div>
-                <div>
-                    <button>
-                        <a href="">Music</a>
-                    </button>
+                <button className={classes.navbarElement}>
+                    <a>Music</a>
+                </button>
 
-                </div>
-                <div>
-                    <button>
-                        <a href="">Video</a>
-                    </button>
+                <button className={classes.navbarElement}>
+                    <a>Video</a>
+                </button>
 
-                </div>
-                <div>
-                    <button>
-                        <a href="">Friends</a>
-                    </button>
+                <button className={classes.navbarElement}>
+                    <a>Friends</a>
+                </button>
 
-                </div>
             </div>
         </nav>
     )

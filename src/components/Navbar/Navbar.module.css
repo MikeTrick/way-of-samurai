@@ -9,12 +9,19 @@
     margin: 10px;
     align-items: center;
     justify-content: space-around;
+
 }
 
 .navbarElements button {
-    background-color: #313d48;
+    background: transparent;
+    width: 250px;
+    height: 33px;
+    border-radius: 4px;
+    border: 0.5px solid black;
 }
 
 .navbarElement {
-    width: 250px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

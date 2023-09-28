@@ -1,0 +1,13 @@
+.profileInfo{
+
+}
+
+.profileInfo_elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profileInfo_elements img {
+    max-width: 300px;
+}
