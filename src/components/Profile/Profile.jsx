@@ -1,7 +1,7 @@
 import React from "react";
 
-import {ProfileInfo} from "./ProfileInfo";
-import {Posts} from "./Posts";
+import {ProfileInfo} from "./ProfileInfo/ProfileInfo";
+import {Posts} from "./Posts/Posts";
 import classes from './Profile.module.css'
 
 export const Profile = () => {

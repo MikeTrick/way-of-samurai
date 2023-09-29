@@ -1,12 +1,12 @@
 .appWrapper {
-    background: radial-gradient(rgb(255, 255, 255), #021f3b );
+    background: radial-gradient(rgb(67, 81, 115), #021f3b );
     display: grid;
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
     font-family: Montserrat, serif;
     font-size: 18px;
-    color: white;
+    color: #ffffff;
 
     grid-template-areas:
     'h h'

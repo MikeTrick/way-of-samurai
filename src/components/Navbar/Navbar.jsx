@@ -10,7 +10,7 @@ export const Navbar = () => {
                     <a>Profile</a>
                 </button>
 
-                <button className={`${classes.navbarElement} ${classes.active}` }>
+                <button className={`${classes.navbarElement} ${classes.active}`}>
                     <a>Messages</a>
                 </button>
 
