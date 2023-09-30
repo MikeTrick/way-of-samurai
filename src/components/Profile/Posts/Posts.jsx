@@ -15,8 +15,8 @@ export const Posts = () => {
                 </div>
             </div>
             <div className={classes.new_posts}>
-                <Post textMessage='Misha'/>
-                <Post textMessage='Tanya'/>
+                <Post textMessage='Misha' likesCount='6'/>
+                <Post textMessage='Tanya' likesCount='55'/>
             </div>
 
 

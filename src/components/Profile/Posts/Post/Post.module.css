@@ -9,3 +9,19 @@
     border: none;
     margin: 20px;
 }
+
+.post_wrapper__likes {
+    display: flex;
+    align-items: center;
+
+}
+
+.post_wrapper__likes button{
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: greenyellow;
+
+
+}
