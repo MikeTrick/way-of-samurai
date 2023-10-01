@@ -1,5 +1,5 @@
 .appWrapper {
-    background: radial-gradient(rgb(67, 81, 115), #021f3b );
+    background: radial-gradient(rgb(67, 81, 115), #021f3b);
     display: grid;
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
@@ -18,18 +18,10 @@
 
 }
 
-/*.nav {*/
-/*    grid-area: n;*/
-/*    background-color: #8e949a;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-
-
-
-/*}*/
+.nav {
+    grid-area: n;
+}
 
 .content {
     grid-area: c;
-
-
 }
