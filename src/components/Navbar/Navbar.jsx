@@ -7,27 +7,27 @@ export const Navbar = () => {
         <nav>
             <div className={classes.navbarElements}>
                 <button className={classes.navbarElement}>
-                    <a>Profile</a>
+                    <a href='/profile'>Profile</a>
                 </button>
 
                 <button className={`${classes.navbarElement} ${classes.active}`}>
-                    <a>Messages</a>
+                    <a href='/messages'>Messages</a>
                 </button>
 
                 <button className={classes.navbarElement}>
-                    <a>Settings</a>
+                    <a href='/settings'>Settings</a>
                 </button>
 
                 <button className={classes.navbarElement}>
-                    <a>Music</a>
+                    <a href='/music'>Music</a>
                 </button>
 
                 <button className={classes.navbarElement}>
-                    <a>Video</a>
+                    <a href='/videos'>Videos</a>
                 </button>
 
                 <button className={classes.navbarElement}>
-                    <a>Friends</a>
+                    <a href='/friends'>Friends</a>
                 </button>
 
             </div>
