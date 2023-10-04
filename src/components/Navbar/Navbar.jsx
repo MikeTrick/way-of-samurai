@@ -1,5 +1,6 @@
 import React from "react";
 import classes from './Navbar.module.css';
+import {NavLink} from "react-router-dom";
 
 export const Navbar = () => {
 
@@ -7,27 +8,43 @@ export const Navbar = () => {
         <nav>
             <div className={classes.navbarElements}>
                 <button className={classes.navbarElement}>
-                    <a href='/profile'>Profile</a>
+                    <NavLink to='/profile'
+                             className={navData => navData.isActive ? classes.activeLink : classes.navbarElement}>
+                        Profile
+                    </NavLink>
                 </button>
 
                 <button className={`${classes.navbarElement} ${classes.active}`}>
-                    <a href='/messages'>Messages</a>
+                    <NavLink to='/messages'
+                             className={navData => navData.isActive ? classes.activeLink : classes.navbarElement}>
+                        Messages
+                    </NavLink>
                 </button>
 
                 <button className={classes.navbarElement}>
-                    <a href='/settings'>Settings</a>
+                    <NavLink to='/settings'
+                             className={navData => navData.isActive ? classes.activeLink : classes.navbarElement}>Settings</NavLink>
                 </button>
 
                 <button className={classes.navbarElement}>
-                    <a href='/music'>Music</a>
+                    <NavLink to='/music'
+                             className={navData => navData.isActive ? classes.activeLink : classes.navbarElement}>
+                        Music
+                    </NavLink>
                 </button>
 
                 <button className={classes.navbarElement}>
-                    <a href='/videos'>Videos</a>
+                    <NavLink to='/videos'
+                             className={navData => navData.isActive ? classes.activeLink : classes.navbarElement}>
+                        Videos
+                    </NavLink>
                 </button>
 
                 <button className={classes.navbarElement}>
-                    <a href='/friends'>Friends</a>
+                    <NavLink to='/friends'
+                             className={navData => navData.isActive ? classes.activeLink : classes.navbarElement}>
+                        Friends
+                    </NavLink>
                 </button>
 
             </div>
