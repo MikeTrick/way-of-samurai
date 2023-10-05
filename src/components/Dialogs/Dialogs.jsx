@@ -14,12 +14,23 @@ export const Dialogs = (props) => {
                 </div>
                 <Dialog name='Misha'/>
             </div>
+            <hr/>
             <div className={classes.messages}>
                 <Message textMessage='Привет!'/>
                 <Message textMessage='Как дела?'/>
                 <Message textMessage='И у меня все круто!'/>
+                <Message textMessage='И у меня все круто!'/>
+                <Message textMessage='И у меня все круто!'/>
+                <Message textMessage='И у меня все круто!'/>
+                <div className={classes.messageAdder_wrapper}>
+                    <input type="text"/>
+                    <button>Отправить</button>
+                </div>
+
             </div>
         </div>
+
+
     )
 
 }

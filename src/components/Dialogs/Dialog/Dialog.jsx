@@ -1,8 +1,9 @@
 import React from "react";
 
+import classes from './Dialog.module.css'
 export const Dialog = (props) => {
     return (
-        <div>
+        <div className={classes.dialog_wrapper}>
             {props.name}
         </div>
     )

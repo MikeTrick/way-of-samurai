@@ -1,0 +1,9 @@
+.dialog_wrapper {
+    width: 260px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #021f3b;
+    margin-top: 10px;
+}

@@ -3,16 +3,47 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
+    margin-left: 50px;
+    margin-top: 50px;
 }
 
 
 .dialogs {
+    width: 300px;
 
 }
 .dialogs.active {
     color: greenyellow;
+    width: 300px;
 }
 
 .messages {
+    width: 600px;
+    margin-right: 300px;
+}
+hr{
+    height: 1000px;
+    margin-left: 70px;
+}
 
+.messageAdder_wrapper  {
+    margin: 30px;
+}
+
+.messageAdder_wrapper input {
+    width: 400px;
+    height: 40px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.81);
+    box-shadow: none;
+    border: none;
+}
+.messageAdder_wrapper button {
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.81);
+    box-shadow: none;
+    border: none;
+    margin-left: 20px;
 }

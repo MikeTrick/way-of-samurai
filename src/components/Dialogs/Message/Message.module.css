@@ -1,0 +1,10 @@
+.message_wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    border: 1px solid #021f3b;
+    border-radius: 6px;
+    height: 40px;
+    padding: 4px;
+}
