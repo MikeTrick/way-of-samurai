@@ -2,29 +2,36 @@ import React from "react";
 
 import classes from './ProfileInfo.module.css'
 
+export const ProfileInfo = (props) => {
 
-export const ProfileInfo = () => {
+    // const ProfileInfoElement = (props) => {
+    //     return (
+    //         <div className="profileInfo_element">
+    //             {props.city}
+    //         </div>
+    //     )
+    // }
     return (
         <div className={classes.profileInfo}>
             <div className={classes.profileInfo_elements}>
                 <div className="profileInfo_elements__left">
-                    <img src="https://99px.ru/sstorage/41/2016/01/image_41260116201523831638.jpg" alt="Avatar"/>
+                    <img src={props.avatar} alt="Avatar"/>
                     <div>
-                        Date of birth
+                        {props.birthDate}
                     </div>
                 </div>
                 <div className="profileInfo_elements__right">
                     <div className="profileInfo_element">
-                        City
+                        {props.city}
                     </div>
                     <div className="profileInfo_element">
-                        Interests
+                        {props.interests}
                     </div>
                     <div className="profileInfo_element">
-                        Education
+                        {props.education}
                     </div>
                     <div className="profileInfo_element">
-                        Website
+                        {props.socialMedia}
                     </div>
                 </div>
 

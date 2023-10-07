@@ -28,8 +28,8 @@ const App = () => {
 
                 <div className="content">
                     <Routes>
-                        <Route path='profile' element={<Profile/>}/>
-                        <Route path='/messages' element={<Dialogs/>}/>
+                        <Route path='/profile' element={<Profile/>}/>
+                        <Route path='/dialogs/*' element={<Dialogs/>}/>
                         <Route path='/settings' element={<Settings/>}/>
                         <Route path='/music' element={<Music/>}/>
                         <Route path='/videos' element={<Videos/>}/>

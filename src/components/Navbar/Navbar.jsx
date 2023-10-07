@@ -15,7 +15,7 @@ export const Navbar = () => {
                 </button>
 
                 <button className={`${classes.navbarElement} ${classes.active}`}>
-                    <NavLink to='/messages'
+                    <NavLink to='/dialogs/'
                              className={navData => navData.isActive ? classes.activeLink : classes.navbarElement}>
                         Messages
                     </NavLink>
