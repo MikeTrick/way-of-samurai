@@ -9,6 +9,11 @@
     border: none;
     margin: 20px;
 }
+.post_wrapper_avatar img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
 
 .post_wrapper__likes {
     display: flex;

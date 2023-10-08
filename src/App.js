@@ -15,17 +15,13 @@ import {Friends} from "./components/Friends/Friends";
 const App = () => {
     return (
         <BrowserRouter>
-
             <div className='appWrapper'>
-
                 <div className="header">
                     <Header/>
                 </div>
                 <div className="nav">
                     <Navbar/>
                 </div>
-
-
                 <div className="content">
                     <Routes>
                         <Route path='/profile' element={<Profile/>}/>
@@ -35,16 +31,10 @@ const App = () => {
                         <Route path='/videos' element={<Videos/>}/>
                         <Route path='/friends' element={<Friends/>}/>
                     </Routes>
-                    {/*<Profile/>*/}
-                    {/*<Dialogs/>*/}
                 </div>
-
             </div>
-
         </BrowserRouter>
     );
-
-
 }
 
 export default App;
