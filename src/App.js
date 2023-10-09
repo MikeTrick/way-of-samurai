@@ -11,8 +11,10 @@ import {Settings} from "./components/Settings/Settings";
 import {Videos} from "./components/Videos/Videos";
 import {Friends} from "./components/Friends/Friends";
 
+import {data} from "./index";
 
-const App = () => {
+
+const App = (props) => {
     return (
         <BrowserRouter>
             <div className='appWrapper'>
