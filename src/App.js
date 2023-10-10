@@ -11,8 +11,6 @@ import {Settings} from "./components/Settings/Settings";
 import {Videos} from "./components/Videos/Videos";
 import {Friends} from "./components/Friends/Friends";
 
-import {data} from "./index";
-
 
 const App = (props) => {
     return (
@@ -26,10 +24,11 @@ const App = (props) => {
                 </div>
                 <div className="content">
                     <Routes>
-                        <Route path='/profile' element={<Profile/>}/>
-                        <Route path='/dialogs/*' element={<Dialogs/>}/>
+                        <Route path='/profile' element={<Profile postData={props.data.postData}/>}/>
+                        <Route path='/dialogs/*' element={<Dialogs dialogsData={props.data.dialogsData}
+                                                                   messagesData={props.data.messagesData}/>}/>
                         <Route path='/settings' element={<Settings/>}/>
-                        <Route path='/music' element={<Music/>}/>
+                        <Route path='/music' element={<Music tracksData={props.data.tracksData}/>}/>
                         <Route path='/videos' element={<Videos/>}/>
                         <Route path='/friends' element={<Friends/>}/>
                     </Routes>
