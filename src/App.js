@@ -24,11 +24,10 @@ const App = (props) => {
                 </div>
                 <div className="content">
                     <Routes>
-                        <Route path='/profile' element={<Profile postData={props.data.postData}/>}/>
-                        <Route path='/dialogs/*' element={<Dialogs dialogsData={props.data.dialogsData}
-                                                                   messagesData={props.data.messagesData}/>}/>
+                        <Route path='/profile' element={<Profile profilePage={props.state.profilePage}/>}/>
+                        <Route path='/dialogs/*' element={<Dialogs dialogsPage={props.state.dialogsPage}/>}/>
                         <Route path='/settings' element={<Settings/>}/>
-                        <Route path='/music' element={<Music tracksData={props.data.tracksData}/>}/>
+                        <Route path='/music' element={<Music musicPage={props.state.musicPage}/>}/>
                         <Route path='/videos' element={<Videos/>}/>
                         <Route path='/friends' element={<Friends/>}/>
                     </Routes>

@@ -5,7 +5,7 @@ import music from './30 Seconds To Mars - Capricorn (A Brand New Name) (320  kbp
 import {Track} from "./Track/Track";
 
 export const Music = (props) => {
-    const trackList = props.tracksData.map(track => {
+    const trackList = props.musicPage.tracksData.map(track => {
         return <Track id={track.id} track={track.track} artist={track.artist}/>
     })
     return (

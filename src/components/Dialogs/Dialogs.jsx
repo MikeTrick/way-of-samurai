@@ -6,10 +6,10 @@ import {Message} from "./Message/Message";
 
 export const Dialogs = (props) => {
 
-    const dialogElements = props.dialogsData.map(dialog => <Dialog id={dialog.id} name={dialog.name}
+    const dialogElements = props.dialogsPage.dialogsData.map(dialog => <Dialog id={dialog.id} name={dialog.name}
                                                                    image={dialog.image}/>
     )
-    const messagesElements = props.messagesData.map(message => <Message textMessage={message.textMessage}
+    const messagesElements = props.dialogsPage.messagesData.map(message => <Message textMessage={message.textMessage}
                                                                         id={message.id}/>)
 
     return (

@@ -16,7 +16,7 @@ export const Profile = (props) => {
             <ProfileInfo avatar="https://99px.ru/sstorage/41/2016/01/image_41260116201523831638.jpg"
                          city='Yekaterinburg' interests='snowboard, bmx, video, drift' birthDate='04.06.1996'
                          education='Engineer' socialMedia='instagram.com/tricky_mike'/>
-            <Posts postData={props.postData}/>
+            <Posts postData={props.profilePage.postData}/>
         </div>
     )
 }
