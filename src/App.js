@@ -20,7 +20,7 @@ const App = (props) => {
                     <Header/>
                 </div>
                 <div className="nav">
-                    <Navbar/>
+                    <Navbar navbar ={props.state.navbar.friendsOnline}/>
                 </div>
                 <div className="content">
                     <Routes>
