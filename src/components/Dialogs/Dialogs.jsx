@@ -14,6 +14,11 @@ export const Dialogs = (props) => {
 
     const newMessageElement = React.createRef();
 
+    const messageUpdater = () => {
+        const message = newMessageElement.current.value;
+        props.updateMessageText(message)
+    }
+
     const messageAdder = () => {
         const message = newMessageElement.current.value;
         props.addMessage(message);
@@ -28,7 +33,11 @@ export const Dialogs = (props) => {
             <div className={classes.messages}>
                 {messagesElements}
                 <div className={classes.messageAdder_wrapper}>
-                    <input type="text" placeholder='Напиши все, что хочешь сказать' ref={newMessageElement}/>
+                    <input type="text"
+                           placeholder='Напиши все, что хочешь сказать'
+                           ref={newMessageElement}
+                           value={props.dialogsPage.newMessageText}
+                    onChange={messageUpdater}/>
                     <button onClick={messageAdder}>Отправить</button>
                 </div>
             </div>

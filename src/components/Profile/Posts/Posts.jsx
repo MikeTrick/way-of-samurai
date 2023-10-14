@@ -10,16 +10,26 @@ export const Posts = (props) => {
                                                          likesCount={post.likesCount} avatar={post.avatar}
     />)
     const newPostElement = React.createRef();
+
+    const onPostChange = () => {
+        const text = newPostElement.current.value;
+        props.updateNewPostText(text);
+    }
+
     const postAdder = () => {
         const text = newPostElement.current.value;
         props.addPost(text);
         newPostElement.current.value = '';
+        props.updateNewPostText('');
+
     }
+
     return (
         <div className={classes.myPosts_wrapper}>
             <div className={classes.input_container}>
                 <div className={classes.input_container__element}>
-                    <input type="text" placeholder='Напиши что нибудь' ref={newPostElement}/>
+                    <input type="text" placeholder='Напиши что нибудь' ref={newPostElement} value={props.newPostText}
+                           onChange={onPostChange}/>
                 </div>
                 <div className={classes.input_container__element}>
                     <button onClick={postAdder}>Отправить</button>

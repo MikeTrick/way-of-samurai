@@ -5,7 +5,6 @@ import {Posts} from "./Posts/Posts";
 import classes from './Profile.module.css'
 
 
-
 export const Profile = (props) => {
     return (
         <div className={classes.profile}>
@@ -16,7 +15,10 @@ export const Profile = (props) => {
             <ProfileInfo avatar="https://99px.ru/sstorage/41/2016/01/image_41260116201523831638.jpg"
                          city='Yekaterinburg' interests='snowboard, bmx, video, drift' birthDate='04.06.1996'
                          education='Engineer' socialMedia='instagram.com/tricky_mike'/>
-            <Posts addPost = {props.addPost} postData={props.profilePage.postData}/>
+            <Posts addPost={props.addPost}
+                   postData={props.profilePage.postData}
+                   newPostText={props.profilePage.newPostText}
+                   updateNewPostText={props.updateNewPostText}/>
         </div>
     )
 }

@@ -25,6 +25,7 @@ export const state = {
             {id: 5, textMessage: 'И у меня все хорошо!'},
             {id: 6, textMessage: 'И у меня все хорошо!'},
         ],
+        newMessageText: '',
     },
 
     profilePage: {
@@ -40,6 +41,7 @@ export const state = {
                 avatar: 'https://sun3-3.userapi.com/impf/c848620/v848620116/4b6/B9RDTgs5nqA.jpg?size=1280x853&quality=96&sign=6fdcab7b8374f358ee59abab5ef64256&type=album'
             }
         ],
+        newPostText: 'Yoyo',
     },
 
     musicPage: {
@@ -74,21 +76,30 @@ export const state = {
 
 }
 
-export const addPost = (postMessage) => {
+export const addPost = () => {
     const newPost = {
         id: 5,
-        textMessage: postMessage,
+        textMessage: state.profilePage.newPostText,
         likesCount: 0
     }
     state.profilePage.postData.push(newPost)
     rerenderEntireTree(state)
 };
+export const updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state)
+};
 
-export const addMessage = (dialogMessage) => {
+export const addMessage = () => {
     const newMessage = {
         id: 4,
-        textMessage: dialogMessage
+        textMessage: state.dialogsPage.newMessageText
     }
     state.dialogsPage.messagesData.push(newMessage);
+    rerenderEntireTree(state)
+};
+
+export const updateMessageText = (newText) => {
+    state.dialogsPage.newMessageText = newText
     rerenderEntireTree(state)
 }
