@@ -20,12 +20,14 @@ const App = (props) => {
                     <Header/>
                 </div>
                 <div className="nav">
-                    <Navbar navbar ={props.state.navbar.friendsOnline}/>
+                    <Navbar navbar={props.state.navbar.friendsOnline}/>
                 </div>
                 <div className="content">
                     <Routes>
-                        <Route path='/profile' element={<Profile profilePage={props.state.profilePage}/>}/>
-                        <Route path='/dialogs/*' element={<Dialogs dialogsPage={props.state.dialogsPage}/>}/>
+                        <Route path='/profile' element={<Profile profilePage={props.state.profilePage}
+                                                                 addPost={props.addPost}/>}/>
+                        <Route path='/dialogs/*' element={<Dialogs dialogsPage={props.state.dialogsPage}
+                                                                   addMessage={props.addMessage}/>}/>
                         <Route path='/settings' element={<Settings/>}/>
                         <Route path='/music' element={<Music musicPage={props.state.musicPage}/>}/>
                         <Route path='/videos' element={<Videos/>}/>

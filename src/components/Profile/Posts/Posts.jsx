@@ -10,9 +10,9 @@ export const Posts = (props) => {
                                                          likesCount={post.likesCount} avatar={post.avatar}
     />)
     const newPostElement = React.createRef();
-    const addPost = () => {
+    const postAdder = () => {
         const text = newPostElement.current.value;
-        alert(text);
+        props.addPost(text);
         newPostElement.current.value = '';
     }
     return (
@@ -22,7 +22,7 @@ export const Posts = (props) => {
                     <input type="text" placeholder='Напиши что нибудь' ref={newPostElement}/>
                 </div>
                 <div className={classes.input_container__element}>
-                    <button onClick={addPost}>Отправить</button>
+                    <button onClick={postAdder}>Отправить</button>
                 </div>
             </div>
             <div className={classes.new_posts}>
