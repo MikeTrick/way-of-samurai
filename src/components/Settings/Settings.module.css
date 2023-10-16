@@ -1,0 +1,26 @@
+h1  {
+    display: flex;
+    justify-content: center;
+}
+.settings_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.settings_element {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 550px;
+    background: rgba(79, 131, 180, 0.58);
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.settings_element a {
+    color: #cbff2f;
+}
