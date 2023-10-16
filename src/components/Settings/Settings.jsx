@@ -25,7 +25,7 @@ export const Settings = () => {
                 </div>
                 <div className={classes.settings_element}>
                     <NavLink to="" onClick={() => {
-                        alert('А изменилось! Сегодня сообщения работают!')
+                        alert('А изменилось! Сегодня сообщения работают !!')
                     }}>Настройки стены</NavLink>
                 </div>
                 <div className={classes.settings_element}>
