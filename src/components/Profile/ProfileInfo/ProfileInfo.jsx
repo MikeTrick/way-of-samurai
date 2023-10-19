@@ -4,34 +4,30 @@ import classes from './ProfileInfo.module.css'
 
 export const ProfileInfo = (props) => {
 
-    // const ProfileInfoElement = (props) => {
-    //     return (
-    //         <div className="profileInfo_element">
-    //             {props.city}
-    //         </div>
-    //     )
-    // }
     return (
         <div className={classes.profileInfo}>
             <div className={classes.profileInfo_elements}>
-                <div className="profileInfo_elements__left">
+                <div className={classes.profileInfo_elements__left}>
                     <img src={props.avatar} alt="Avatar"/>
-                    <div>
-                        {props.birthDate}
+                    <div className={classes.name}>
+                        {props.name}
                     </div>
                 </div>
-                <div className="profileInfo_elements__right">
-                    <div className="profileInfo_element">
-                        {props.city}
+                <div className={classes.profileInfo_elements__right}>
+                    <div className={classes.profileInfo_element}>
+                        <span>Дата рождения</span>: {props.birthDate}
                     </div>
-                    <div className="profileInfo_element">
-                        {props.interests}
+                    <div className={classes.profileInfo_element}>
+                        <span>Город</span>: {props.city}
                     </div>
-                    <div className="profileInfo_element">
-                        {props.education}
+                    <div className={classes.profileInfo_element}>
+                        <span>Интересы</span>: {props.interests}
                     </div>
-                    <div className="profileInfo_element">
-                        {props.socialMedia}
+                    <div className={classes.profileInfo_element}>
+                        <span>Образование</span>: {props.education}
+                    </div>
+                    <div className={classes.profileInfo_element}>
+                        <span>Социальные сети</span>: {props.socialMedia}
                     </div>
                 </div>
 

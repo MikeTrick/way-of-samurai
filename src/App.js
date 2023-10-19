@@ -33,7 +33,7 @@ const App = (props) => {
                         <Route path='/settings' element={<Settings/>}/>
                         <Route path='/music' element={<Music musicPage={props.state.musicPage}/>}/>
                         <Route path='/videos' element={<Videos/>}/>
-                        <Route path='/friends' element={<Friends/>}/>
+                        <Route path='/friends' element={<Friends friendsPage={props.state.friendsPage}/>} />
                     </Routes>
                 </div>
             </div>
