@@ -16,12 +16,15 @@ export const Dialogs = (props) => {
 
     const messageUpdater = () => {
         const message = newMessageElement.current.value;
-        props.updateMessageText(message)
+        props.dispatch({
+            type: 'UPDATE-MESSAGE-TEXT',
+            newText: message
+        })
     }
 
     const messageAdder = () => {
-        const message = newMessageElement.current.value;
-        props.addMessage(message);
+        const action = {type:'ADD-MESSAGE'};
+        props.dispatch(action);
         newMessageElement.current.value = '';
     }
     return (
@@ -37,7 +40,7 @@ export const Dialogs = (props) => {
                            placeholder='Напиши все, что хочешь сказать'
                            ref={newMessageElement}
                            value={props.dialogsPage.newMessageText}
-                    onChange={messageUpdater}/>
+                           onChange={messageUpdater}/>
                     <button onClick={messageAdder}>Отправить</button>
                 </div>
             </div>

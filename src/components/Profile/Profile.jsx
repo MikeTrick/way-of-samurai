@@ -16,10 +16,9 @@ export const Profile = (props) => {
                          city='Yekaterinburg' interests='snowboard, bmx, video, drift' birthDate='04.06.1996'
                          education='Engineer' socialMedia='instagram.com/tricky_mike'
             name='TRICKY MIKE'/>
-            <Posts addPost={props.addPost}
+            <Posts dispatch={props.dispatch}
                    postData={props.profilePage.postData}
-                   newPostText={props.profilePage.newPostText}
-                   updateNewPostText={props.updateNewPostText}/>
+                   newPostText={props.profilePage.newPostText}/>
         </div>
     )
 }

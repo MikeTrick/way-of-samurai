@@ -25,15 +25,15 @@ const App = (props) => {
                 <div className="content">
                     <Routes>
                         <Route path='/profile' element={<Profile profilePage={props.state.profilePage}
-                                                                 addPost={props.addPost}
-                                                                 updateNewPostText={props.updateNewPostText}/>}/>
+                                                                 dispatch={props.dispatch}
+                        />}/>
                         <Route path='/dialogs/*' element={<Dialogs dialogsPage={props.state.dialogsPage}
-                                                                   addMessage={props.addMessage}
-                                                                   updateMessageText={props.updateMessageText}/>}/>
+                                                                   dispatch={props.dispatch}
+                        />}/>
                         <Route path='/settings' element={<Settings/>}/>
                         <Route path='/music' element={<Music musicPage={props.state.musicPage}/>}/>
                         <Route path='/videos' element={<Videos/>}/>
-                        <Route path='/friends' element={<Friends friendsPage={props.state.friendsPage}/>} />
+                        <Route path='/friends' element={<Friends friendsPage={props.state.friendsPage}/>}/>
                     </Routes>
                 </div>
             </div>
