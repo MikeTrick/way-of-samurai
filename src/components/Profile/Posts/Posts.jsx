@@ -2,6 +2,7 @@ import React from "react";
 
 import {Post} from "./Post/Post";
 import classes from './Posts.module.css'
+import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/state";
 
 export const Posts = (props) => {
 
@@ -13,14 +14,11 @@ export const Posts = (props) => {
 
     const onPostChange = () => {
         const text = newPostElement.current.value;
-        props.dispatch({
-            type: 'UPDATE-NEW-POST-TEXT',
-            newText: text
-        });
+        props.dispatch(updateNewPostTextActionCreator(text));
     }
 
-    const postAdder = () => {
-        props.dispatch({type: 'ADD-POST'});
+    const addPost = () => {
+        props.dispatch(addPostActionCreator());
         newPostElement.current.value = '';
     }
 
@@ -32,7 +30,7 @@ export const Posts = (props) => {
                            onChange={onPostChange}/>
                 </div>
                 <div className={classes.input_container__element}>
-                    <button onClick={postAdder}>Отправить</button>
+                    <button onClick={addPost}>Отправить</button>
                 </div>
             </div>
             <div className={classes.new_posts}>

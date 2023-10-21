@@ -1,3 +1,8 @@
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const ADD_POST = 'ADD-POST';
+const UPDATE_MESSAGE_TEXT = 'UPDATE-MESSAGE-TEXT';
+const ADD_MESSAGE = 'ADD-MESSAGE';
+
 export const store = {
 
 
@@ -136,6 +141,30 @@ export const store = {
             this._callSubscriber(this._state)
         }
     }
+}
 
+export const updateNewPostTextActionCreator = (text) => {
+    return {
+        type: UPDATE_NEW_POST_TEXT,
+        newText: text
+    }
+}
+export const addPostActionCreator = () => {
+    return {
+        type: ADD_POST
+    }
+}
 
+export const addMessageActionCreator = () => {
+
+    return {
+        type: ADD_MESSAGE
+    }
+}
+export const updateMessageText = (message) => {
+
+    return {
+        type: UPDATE_MESSAGE_TEXT,
+        newText: message
+    }
 }

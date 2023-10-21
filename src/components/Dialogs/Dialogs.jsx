@@ -3,6 +3,8 @@ import React from "react";
 import classes from './Dialogs.module.css'
 import {Dialog} from "./Dialog/Dialog";
 import {Message} from "./Message/Message";
+import {addMessageActionCreator, updateMessageText} from "../../redux/state";
+
 
 export const Dialogs = (props) => {
 
@@ -16,15 +18,11 @@ export const Dialogs = (props) => {
 
     const messageUpdater = () => {
         const message = newMessageElement.current.value;
-        props.dispatch({
-            type: 'UPDATE-MESSAGE-TEXT',
-            newText: message
-        })
+        props.dispatch(updateMessageText(message))
     }
 
-    const messageAdder = () => {
-        const action = {type:'ADD-MESSAGE'};
-        props.dispatch(action);
+    const addMessage = () => {
+        props.dispatch(addMessageActionCreator());
         newMessageElement.current.value = '';
     }
     return (
@@ -41,7 +39,7 @@ export const Dialogs = (props) => {
                            ref={newMessageElement}
                            value={props.dialogsPage.newMessageText}
                            onChange={messageUpdater}/>
-                    <button onClick={messageAdder}>Отправить</button>
+                    <button onClick={addMessage}>Отправить</button>
                 </div>
             </div>
         </div>
