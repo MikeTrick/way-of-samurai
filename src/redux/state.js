@@ -1,11 +1,10 @@
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const ADD_POST = 'ADD-POST';
-const UPDATE_MESSAGE_TEXT = 'UPDATE-MESSAGE-TEXT';
-const ADD_MESSAGE = 'ADD-MESSAGE';
+import {profileReducer} from "./profile-reducer";
+import {dialogReducer} from "./dialogs-reducer";
+import {friendsReducer} from "./friends-reducer";
+import {navbarReducer} from "./navbar-reducer";
+import {musicReducer} from "./music-reducer";
 
 export const store = {
-
-
     _state: {
 
         dialogsPage: {
@@ -116,55 +115,12 @@ export const store = {
     },
 
     dispatch(action) {
-        if (action.type === 'ADD-POST') {
-            const newPost = {
-                id: 5,
-                textMessage: this._state.profilePage.newPostText,
-                likesCount: 0
-            }
-            this._state.profilePage.postData.push(newPost)
-            this._state.profilePage.newPostText = ''
-            this._callSubscriber(this._state)
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
-            this._state.profilePage.newPostText = action.newText;
-            this._callSubscriber(this._state)
-        } else if (action.type === 'ADD-MESSAGE') {
-            const newMessage = {
-                id: 4,
-                textMessage: this._state.dialogsPage.newMessageText
-            }
-            this._state.dialogsPage.messagesData.push(newMessage);
-            this._state.dialogsPage.newMessageText = ''
-            this._callSubscriber(this._state)
-        } else if (action.type === 'UPDATE-MESSAGE-TEXT') {
-            this._state.dialogsPage.newMessageText = action.newText;
-            this._callSubscriber(this._state)
-        }
-    }
-}
+        this._state.profilePage = profileReducer(this._state.profilePage, action)
+        this._state.dialogsPage = dialogReducer(this._state.dialogsPage, action)
+        this._state.friendsPage = friendsReducer(this._state.friendsPage, action)
+        this._state.navbar = navbarReducer(this._state.navbar, action)
+        this._state.musicPage = musicReducer(this._state.musicPage, action)
 
-export const updateNewPostTextActionCreator = (text) => {
-    return {
-        type: UPDATE_NEW_POST_TEXT,
-        newText: text
-    }
-}
-export const addPostActionCreator = () => {
-    return {
-        type: ADD_POST
-    }
-}
-
-export const addMessageActionCreator = () => {
-
-    return {
-        type: ADD_MESSAGE
-    }
-}
-export const updateMessageText = (message) => {
-
-    return {
-        type: UPDATE_MESSAGE_TEXT,
-        newText: message
+        this._callSubscriber(this._state)
     }
 }
