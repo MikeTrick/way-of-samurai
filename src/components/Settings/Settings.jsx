@@ -3,7 +3,6 @@ import classes from './Settings.module.css'
 import {NavLink} from "react-router-dom";
 
 export const Settings = () => {
-
     return (
         <div>
             <h1>Settings</h1>
@@ -33,7 +32,6 @@ export const Settings = () => {
                         alert('Сейчас увидишь!')
                     }}>Настройки настроек</NavLink>
                 </div>
-
             </div>
         </div>
     )
