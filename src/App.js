@@ -12,30 +12,27 @@ import {Videos} from "./components/Videos/Videos";
 import {Friends} from "./components/Friends/Friends";
 
 
-const App = (props) => {
+const App = () => {
     return (
         <div className='appWrapper'>
             <div className="header">
                 <Header/>
             </div>
             <div className="nav">
-                <Navbar navbar={props.state.navbar.friendsOnline}/>
+                <Navbar />
             </div>
             <div className="content">
                 <Routes>
-                    <Route path='/profile' element={<Profile profilePage={props.state.profilePage}
-                                                             dispatch={props.dispatch}
-                    />}/>
-                    <Route path='/dialogs/*' element={<Dialogs dialogsPage={props.state.dialogsPage}
-                                                               dispatch={props.dispatch}
-                    />}/>
+                    <Route path='/profile' element={<Profile/>}/>
+                    <Route path='/dialogs/*' element={<Dialogs />}/>
                     <Route path='/settings' element={<Settings/>}/>
-                    <Route path='/music' element={<Music musicPage={props.state.musicPage}/>}/>
+                    <Route path='/music' element={<Music />}/>
                     <Route path='/videos' element={<Videos/>}/>
-                    <Route path='/friends' element={<Friends friendsPage={props.state.friendsPage}/>}/>
+                    <Route path='/friends' element={<Friends/>}/>
                 </Routes>
             </div>
         </div>
+
     );
 }
 
