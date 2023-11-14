@@ -8,7 +8,6 @@ export const Track = (props) => {
             <div>
                 {props.artist} - {props.track}
             </div>
-
         </div>
     )
 }
