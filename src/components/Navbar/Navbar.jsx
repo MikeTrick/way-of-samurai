@@ -52,6 +52,12 @@ export const Navbar = (props) => {
                         Friends
                     </NavLink>
                 </button>
+                <button className={classes.navbarElement}>
+                    <NavLink to='/users'
+                             className={navData => navData.isActive ? classes.activeLink : classes.navbarElement}>
+                        Users
+                    </NavLink>
+                </button>
 
                 <div className="navbarElement_friendsOnline">
                     <div className={classes.friendOnline}>
