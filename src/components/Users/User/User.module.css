@@ -4,8 +4,8 @@
     justify-content: space-around;
     margin-top: 30px;
     background: rgba(56, 56, 87, 0.84);
-    height: 100px;
-    width: 500px;
+    height: 150px;
+    width: 600px;
     border-radius: 10px;
 
 }
@@ -22,6 +22,10 @@
     align-items: flex-start;
     padding-top: 40px;
     margin-left: 25px;
+}
 
-
+.user_preview button {
+    width: 100px;
+    height: 20px;
+    color: black;
 }
