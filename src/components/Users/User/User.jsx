@@ -1,6 +1,6 @@
 import React from "react";
 import classes from './User.module.css'
-
+import miniAva from '../../../media/photo.jpg'
 export const User = (props) => {
 
 
@@ -19,15 +19,13 @@ export const User = (props) => {
         <div>
             <div className={classes.user_wrapper}>
                 <div className={classes.user_preview}>
-                    <img src="" alt="avatar"/>
+                    <img src={props.smallPhoto != null? props.smallPhoto : miniAva} alt=''/>
                     <div className={classes.user_preview}>
                         {isFollowed()}
                     </div>
                 </div>
                 <div className={classes.user_info}>
-                    <div>{props.fullName}</div>
-                    <div>{props.country}</div>
-                    <div>{props.city}</div>
+                    <div>{props.name}</div>
                     <div>{props.status}</div>
                 </div>
             </div>
